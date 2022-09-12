@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    /* TIPOGRAFIA */
+    font-size: 62.5%;
+    --FF-h1-h2: 'Staatliches', cursive;
+    --FF-desktop: 'Roboto', sans-serif;
+    --FF-mobile: 'Palanquin', sans-serif;
+    --FF-footer: 'Open Sans', sans-serif;
+
+    /* CORES */
+    --FC-h1: #FFFFFF;
+    --FC-h2: #4A4E69;
+    --FC-mobile: #23053A;
+    --FC-desktop: #FFFFFF;
+    --FC-footer: #4A4E69;
+    --BG-body-mobile: #EFF1FF;
+    --BG-body-desktop: #FFFFFF;
+    --BG-header: #8E9AAF;
+    --BG-h1:#CBC0D3;
+    --BG-h2: #FEEAFA;
+}
+
+body {
+    background-color: var(--BG-body-mobile);
+}
+
+.page {
+    height: 1995px;
+}
+
+header {
+    background-color: var(--BG-header);
+    text-align: center;
+    padding: 3.2rem 0;
+}
+
+header img {
+    margin-bottom: 3.2rem;
+}
+
+header h1 {
+    font-family: var(--FF-h1-h2);
+    font-size: 4rem;
+    line-height: 3.4rem;
+    letter-spacing: 1px;
+    background-color: var(--BG-h1);
+    color: var(--FC-h1);
+    padding: .8rem 0;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+header p {
+    font-family: var(--FF-desktop);
+    color: var(--FC-desktop);
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    text-align: center;
+    max-width: 27.5rem;
+    max-height: 26.2rem;
+    margin: 3.2rem  auto 0 auto;
+}
+
+main {
+    height: 1642px;
+    width: 320px;
+    margin: 14px auto 60px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main p {
+    font-family: var(--FF-mobile);
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.gallery {
+    height: 1508px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.8fr 1fr 1.8fr;
+    row-gap: 3.6rem;
+}
+
+.card {
+    background-color: #C70A80;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    position: relative;
+}
+
+.card h2 {
+    font-family: var(--FF-h1-h2);
+    font-size: 2rem;
+    line-height: 3.4rem;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+    color: var(--FC-h2);
+    background-color: var(--BG-h2);
+    padding: 0 2.4rem;
+    border-radius: 2rem;
+    animation: rightleft 1500ms ease-out;
+}
+
+.gallery div:nth-of-type(1) {
+    background-image: url(./images/sorvete1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: topdown 800ms ease-out;
+}
+
+.gallery div:nth-of-type(1) {
+    background-image: url(./images/sorvete1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery div:nth-of-type(2) {
+    background-image: url(./images/sorvete2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: topdown 800ms ease-out;
+}
+
+.gallery div:nth-of-type(3) {
+    background-image: url(./images/sorvete3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: topdown 800ms ease-out;
+}
+
+.gallery div:nth-of-type(4) {
+    background-image: url(./images/sorvete4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: downtop 800ms ease-out;
+}
+
+.gallery div:nth-of-type(5) {
+    background-image: url(./images/sorvete5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: downtop 800ms ease-out;
+}
+
+.gallery div:nth-of-type(6) {
+    background-image: url(./images/sorvete6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: downtop 800ms ease-out;
+}
+
+footer {
+    font-family: var(--FF-footer);
+    color: var(--FC-footer);
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    text-align: center;
+}
+
+footer a {
+    color: var(--FC-footer);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.desktop {
+    display: none;
+}
+
+@keyframes topdown {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes downtop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes leftright {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rightleft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    
+    body {
+        background-color: var(--BG-body-desktop);
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .page {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr .25fr;
+        grid-template-areas: 
+            "header main main main"
+            "header main main main"
+            "header main main main"
+            "header footer footer footer";
+    }
+
+    header {
+        grid-area: header;
+        height: 100%;
+    }
+
+    main {
+        grid-area: main;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        display: block;
+        padding: 64px 90px;
+    }
+
+    .gallery {
+        height: 100%;
+        width: 724px;
+        margin: 0 auto;
+        display: grid;
+        gap: 32px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1.3fr 1fr;
+        grid-template-areas: 
+            "card1 card2 card3"
+            "card4 card2 card6"
+            "card4 card5 card6";
+    }
+
+    .gallery div:nth-of-type(1) {
+        grid-area: card1;
+    }
+    
+    .gallery div:nth-of-type(2) {
+        grid-area: card2;
+    }
+
+    .gallery div:nth-of-type(3) {
+        grid-area: card3;
+    }
+
+    .gallery div:nth-of-type(4) {
+        grid-area: card4;
+    }
+
+    .gallery div:nth-of-type(5) {
+        grid-area: card5;
+    }
+
+    .gallery div:nth-of-type(6) {
+        grid-area: card6;
+    }
+
+    footer {
+        grid-area: footer;
+        height: 100%;
+        width: 100%;
+    }
+}
